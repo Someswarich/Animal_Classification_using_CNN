@@ -94,4 +94,6 @@ def track():
        
 # ----------------------------------------------Update Item------------------------------------------
 if __name__ == "__main__":
-    app.run(debug=True, host='127.0.0.1', port=5000,use_reloader=False)
+    # app.run(debug=True, host='127.0.0.1', port=5000,use_reloader=False)
+      port = int(os.environ.get("PORT", 5000))  # Render provides PORT dynamically
+      app.run(host="0.0.0.0", port=port, debug=False)
